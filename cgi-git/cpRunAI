@@ -1,0 +1,5 @@
+#/bin/bash
+
+rm /usr/lib/cgi-bin/runAI
+cp /media/ben/SPOT/FourInARow_GIT/cgi-git/runAI /usr/lib/cgi-bin/
+chmod 755 /usr/lib/cgi-bin/runAI

@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1515737577 source:/media/ben/SPOT/Connect4/backprop/RunNN/canEnd.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	"globals.h"
+
+1515733511 /media/ben/SPOT/Connect4/backprop/RunNN/globals.h
+	"neuron.h"
+	"weight.h"
+
+1515732133 /media/ben/SPOT/Connect4/backprop/RunNN/neuron.h
+	<cmath>
+
+1516898879 source:/media/ben/SPOT/Connect4/backprop/RunNN/checkState.cpp
+
+1515733437 /media/ben/SPOT/Connect4/backprop/RunNN/weight.h
+
+1515780279 source:/media/ben/SPOT/Connect4/backprop/RunNN/main.cpp
+	<iostream>
+	<cstring>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	<array>
+	<cmath>
+	<time.h>
+	"neuron.h"
+	"globals.h"
+	"weight.h"
+
+1515736522 source:/media/ben/SPOT/Connect4/backprop/RunNN/neuralMove.cpp
+	<iostream>
+	<cstring>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	<array>
+	<cmath>
+	"neuron.h"
+	"globals.h"
+
+1515731400 source:/media/ben/SPOT/Connect4/backprop/RunNN/possibleMove.cpp
+	<iostream>
+
+1515780465 source:/media/ben/SPOT/Connect4/backprop/RunNN/printBoard.cpp
+	<cstdio>
+	<cstring>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"globals.h"
+
+1515731400 source:/media/ben/SPOT/Connect4/backprop/RunNN/random.cpp
+	<stdlib.h>
+
+1515734116 source:/media/ben/SPOT/Connect4/backprop/RunNN/refPointers.cpp
+	"globals.h"
+	"weight.h"
+
+1517261400 source:/media/ben/SPOT/Connect4/backprop/RunNN/minimaxMove.cpp
+	<iostream>
+	<cstring>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	<array>
+	"globals.h"
+
