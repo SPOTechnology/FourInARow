@@ -1,0 +1,6 @@
+00:34:15 **** Incremental Build of configuration Release for project trainAIBackprop ****
+make all 
+make: Nothing to be done for 'all'.
+
+00:34:16 Build Finished (took 270ms)
+

@@ -1,0 +1,80 @@
+00:36:55 **** Incremental Build of configuration Release for project runServer ****
+make all 
+Building file: ../src/alphabetaMove.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/alphabetaMove.d" -MT"src/alphabetaMove.d" -o "src/alphabetaMove.o" "../src/alphabetaMove.cpp"
+Finished building: ../src/alphabetaMove.cpp
+ 
+Building file: ../src/benimaxMove.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/benimaxMove.d" -MT"src/benimaxMove.d" -o "src/benimaxMove.o" "../src/benimaxMove.cpp"
+Finished building: ../src/benimaxMove.cpp
+ 
+Building file: ../src/canEnd.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/canEnd.d" -MT"src/canEnd.d" -o "src/canEnd.o" "../src/canEnd.cpp"
+Finished building: ../src/canEnd.cpp
+ 
+Building file: ../src/checkState.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/checkState.d" -MT"src/checkState.d" -o "src/checkState.o" "../src/checkState.cpp"
+Finished building: ../src/checkState.cpp
+ 
+Building file: ../src/compare.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/compare.d" -MT"src/compare.d" -o "src/compare.o" "../src/compare.cpp"
+Finished building: ../src/compare.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/minimaxMove.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/minimaxMove.d" -MT"src/minimaxMove.d" -o "src/minimaxMove.o" "../src/minimaxMove.cpp"
+Finished building: ../src/minimaxMove.cpp
+ 
+Building file: ../src/neuralMove.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/neuralMove.d" -MT"src/neuralMove.d" -o "src/neuralMove.o" "../src/neuralMove.cpp"
+Finished building: ../src/neuralMove.cpp
+ 
+Building file: ../src/playGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/playGame.d" -MT"src/playGame.d" -o "src/playGame.o" "../src/playGame.cpp"
+Finished building: ../src/playGame.cpp
+ 
+Building file: ../src/possibleMove.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/possibleMove.d" -MT"src/possibleMove.d" -o "src/possibleMove.o" "../src/possibleMove.cpp"
+Finished building: ../src/possibleMove.cpp
+ 
+Building file: ../src/printBoard.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/printBoard.d" -MT"src/printBoard.d" -o "src/printBoard.o" "../src/printBoard.cpp"
+Finished building: ../src/printBoard.cpp
+ 
+Building file: ../src/random.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/random.d" -MT"src/random.d" -o "src/random.o" "../src/random.cpp"
+Finished building: ../src/random.cpp
+ 
+Building file: ../src/readWeights.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/readWeights.d" -MT"src/readWeights.d" -o "src/readWeights.o" "../src/readWeights.cpp"
+Finished building: ../src/readWeights.cpp
+ 
+Building file: ../src/refPointers.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/refPointers.d" -MT"src/refPointers.d" -o "src/refPointers.o" "../src/refPointers.cpp"
+Finished building: ../src/refPointers.cpp
+ 
+Building target: runServer
+Invoking: GCC C++ Linker
+g++  -o "runServer"  ./src/alphabetaMove.o ./src/benimaxMove.o ./src/canEnd.o ./src/checkState.o ./src/compare.o ./src/main.o ./src/minimaxMove.o ./src/neuralMove.o ./src/playGame.o ./src/possibleMove.o ./src/printBoard.o ./src/random.o ./src/readWeights.o ./src/refPointers.o   
+Finished building target: runServer
+ 
+
+00:36:57 Build Finished (took 2s.328ms)
+
