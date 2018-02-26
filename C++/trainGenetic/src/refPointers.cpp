@@ -1,9 +1,6 @@
 #include "globals.h"
 #include "weight.h"
 
-using namespace std;
-
-
 void refPointers(int population, int genome) {
 	int offset = 0;
 	for (int i = 0; i < hiddens; ++i) {

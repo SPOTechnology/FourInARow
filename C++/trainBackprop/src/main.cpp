@@ -12,8 +12,6 @@
 #include "globals.h"
 #include "weight.h"
 
-using namespace std;
-
 //functions
 long double random(double _min, double _max);
 void refPointers();

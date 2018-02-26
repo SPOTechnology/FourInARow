@@ -6,8 +6,6 @@
 #include "globals.h"
 #include "weight.h"
 
-using namespace std;
-
 long double random(double _min, double _max);
 
 int compare(const void * a, const void * b) { //compare function for q sort
@@ -21,14 +19,14 @@ int compare(const void * a, const void * b) { //compare function for q sort
 }
 
 void evolve() {
-	cout << "\n\n\n\n\n\n\n\n\n\n";
-	cout << "Generation number: " << generation << endl;
+	std::cout << "\n\n\n\n\n\n\n\n\n\n";
+	std::cout << "Generation number: " << generation << std::endl;
 	for (int population = 0; population < pop; ++population) {
 		qsort(fitness[population], gen, sizeof(Fitness), compare);\
 		for (int genome = 0; genome < gen; ++genome) {
 			char buff[100];
 			snprintf(buff, 100, "Population %d, Genome %d: %ld", population, genome, fitness[population][genome].fit);
-			cout << buff << endl;
+			std::cout << buff << std::endl;
 		}
 
 		Weight tempWeight[gen][weights];
@@ -55,5 +53,5 @@ void evolve() {
 			}
 		}
 	}
-	cout << "\n\n\n\n\n\n\n\n\n\n";
+	std::cout << "\n\n\n\n\n\n\n\n\n\n";
 }

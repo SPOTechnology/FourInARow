@@ -7,8 +7,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 char checkState(int board[7][6]);
 int possibleMove(int board[6]);
 

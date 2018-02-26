@@ -2,8 +2,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 char checkState(int board[7][6]);
 int neuralMove(int population, int genome, int startingMove);
 int benimaxMove(int opDepth, int board[7][6]);
@@ -20,10 +18,10 @@ void playGame(int opDepth, int population, int genome, int startingMove) {
 				m = neuralMove(population, genome, startingMove);
 			}
 			brd[m][possibleMove(brd[m])] = 2;
-			cout << "NN move: " << m << endl;
+			std::cout << "NN move: " << m << std::endl;
 			printBoard();
 		} else {
-			cout << "Benimax wins" << endl;
+			std::cout << "Benimax wins" << std::endl;
 			printBoard();
 			break;
 		}
@@ -35,10 +33,10 @@ void playGame(int opDepth, int population, int genome, int startingMove) {
 				m = benimaxMove(opDepth, brd);
 			}
 			brd[m][possibleMove(brd[m])] = 1;
-			cout << "Benimax move: " << m << endl;
+			std::cout << "Benimax move: " << m << std::endl;
 			printBoard();
 		} else {
-			cout << "NN wins" << endl;
+			std::cout << "NN wins" << std::endl;
 			if (startingMove == 1 || startingMove == 5) {
 				fitness[population][genome].fit += 2000;
 			} else if (startingMove == 2 || startingMove == 4) {

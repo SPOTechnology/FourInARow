@@ -2,8 +2,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 char checkState(int board[7][6]);
 int neuralMove();
 int minimaxMove(int maxDepth, int board[7][6]);
@@ -42,7 +40,7 @@ char playGame(int program, bool search) {
 		} else if (program == 2) {
 			return benimaxMove(depth, brd) + 48;
 		} else {
-			depth*=2;
+			depth *= 2;
 			return alphabetaMove(depth, brd) + 48;
 		}
 	} else if (state == '2') {

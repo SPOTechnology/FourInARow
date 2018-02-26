@@ -1,6 +1,6 @@
-00:36:57 **** Incremental Build of configuration Release for project trainBackprop ****
+15:37:30 **** Incremental Build of configuration Release for project trainBackprop ****
 make all 
 make: Nothing to be done for 'all'.
 
-00:36:58 Build Finished (took 261ms)
+15:37:30 Build Finished (took 259ms)
 

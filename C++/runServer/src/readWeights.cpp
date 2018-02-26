@@ -6,20 +6,18 @@
 
 #include "globals.h"
 
-using namespace std;
-
 long double temp[weights];
 
 void readWeights() {
-	ifstream in0("weights.bin", ios::in | ios::binary);
+	std::ifstream in0("weights.bin", std::ios::in | std::ios::binary);
 	if (in0.is_open()) {
-		in0.read((char *) &temp, sizeof temp);
-		in0.close();
+		in0.std::ifstream::read((char *) &temp, sizeof temp);
+		in0.std::ifstream::close();
 
 		for (int i = 0; i < weights; ++i) {
 			weight[i].setVal(temp[i]);
 		}
 	} else {
-		cout << "Failed to read weights" << endl;
+		std::cout << "Failed to read weights" << std::endl;
 	}
 }

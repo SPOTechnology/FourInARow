@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int possibleMove(int board[6]){
 	for(int y = 0; y < 6; ++y){
 		if(board[y] == 0){

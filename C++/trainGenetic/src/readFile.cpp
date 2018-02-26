@@ -4,18 +4,16 @@
 #include "globals.h"
 #include "weight.h"
 
-using namespace std;
-
 long double random(double _min, double _max);
 
 void readFile(char fileName[]) {
 	long double tempWeight[weights];
-	ifstream inFile(fileName, ios::in | ios::binary);
+	std::ifstream inFile(fileName, std::ios::in | std::ios::binary);
 	if (inFile.is_open()) {
 		inFile.read((char *) &tempWeight, sizeof tempWeight);
 		inFile.close();
 	} else {
-		cout << "Failed to read weights" << endl;
+		std::cout << "Failed to read weights" << std::endl;
 		while (1) {
 		}
 	}

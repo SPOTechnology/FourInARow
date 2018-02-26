@@ -9,8 +9,6 @@
 #include "neuron.h"
 #include "globals.h"
 
-using namespace std;
-
 int possibleMove(int board[6]);
 int benimaxMove(int opDepth, int board[7][6]);
 

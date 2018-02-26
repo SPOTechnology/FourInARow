@@ -9,9 +9,9 @@
 #include "weight.h"
 
 typedef struct {
-		int move = 0;
-		int val = 0;
-		int prior = 0;
+	int move = 0;
+	int val = 0;
+	int prior = 0;
 } Moves;
 extern Moves moves[7];
 

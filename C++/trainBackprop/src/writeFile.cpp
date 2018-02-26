@@ -9,8 +9,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 int prevFit;
 
 time_t prevTime;
@@ -20,21 +18,22 @@ long double we[weights];
 void writeFile() {
 	time_t now = time(0);
 
-	for(int w = 0; w < weights; ++w) {
+	for (int w = 0; w < weights; ++w) {
 		we[w] = weight[w].val();
 	}
 
 	char buff[100];
 
-	snprintf(buff, 100, "weights_g%d_f%d_t%ld.bin", generation-1, prevFit, prevTime);
+	snprintf(buff, 100, "weights_g%d_f%d_t%ld.bin", generation - 1, prevFit,
+			prevTime);
 
 	remove(buff);
 
 	snprintf(buff, 100, "weights_g%d_f%d_t%ld.bin", generation, fitness, now);
 
-	ofstream out(buff, ios::out | ios::binary);
-	if(!out) {
-		cout << "Cannot open file";
+	std::ofstream out(buff, std::ios::out | std::ios::binary);
+	if (!out) {
+		std::cout << "Cannot open file";
 		return;
 	}
 

@@ -6,8 +6,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 void printBoard() {
 
 	char buffer[1000];
@@ -34,7 +32,7 @@ void printBoard() {
 	          brd[0][0], brd[1][0], brd[2][0], brd[3][0], brd[4][0], brd[5][0], brd[6][0]
 	         );
 
-	cout << buffer << endl;
+	std::cout << buffer << std::endl;
 }
 
 

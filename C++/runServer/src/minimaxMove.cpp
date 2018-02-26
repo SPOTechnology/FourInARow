@@ -6,8 +6,6 @@
 #include <array>
 #include "globals.h"
 
-using namespace std;
-
 char checkState(int board[7][6]);
 int possibleMove(int board[6]);
 int compareN(const void * a, const void *b);
@@ -36,7 +34,8 @@ int minimax(int board[7][6], int _depth, bool maximizingPlayer, int maxDepth) {
 			_board[i][move] = maximizingPlayer ? 2 : 1;
 			int v = minimax(_board, _depth + 1, !maximizingPlayer, maxDepth);
 			bestValue =
-					maximizingPlayer ? max(v, bestValue) : min(v, bestValue);
+					maximizingPlayer ?
+							std::max(v, bestValue) : std::min(v, bestValue);
 		}
 	}
 	return bestValue;

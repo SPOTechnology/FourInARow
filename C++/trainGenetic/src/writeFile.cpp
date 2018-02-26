@@ -9,8 +9,6 @@
 
 #include "globals.h"
 
-using namespace std;
-
 long prevFit[pop];
 
 time_t prevTime;
@@ -36,9 +34,9 @@ void writeFile() {
 
 		snprintf(buff, 100, "weights_g%d_pop%d_f%ld_t%ld.bin", generation, population, fitness[population][0].fit, now);
 
-		ofstream out(buff, ios::out | ios::binary);
+		std::ofstream out(buff, std::ios::out | std::ios::binary);
 		if (!out) {
-			cout << "Cannot open file";
+			std::cout << "Cannot open file";
 			return;
 		}
 

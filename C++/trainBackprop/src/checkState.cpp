@@ -1,7 +1,5 @@
 int possibleMove(int board[6]);
 
-using namespace std;
-
 char checkState(int board[7][6]) {
 	int possible = 0;
 	for(int i = 0; i < 7; ++i){

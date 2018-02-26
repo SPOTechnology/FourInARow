@@ -6,13 +6,12 @@
 #include <array>
 #include "globals.h"
 
-using namespace std;
-
 char checkState(int board[7][6]);
 int possibleMove(int board[6]);
 int compareN(const void * a, const void *b);
 
-int alphabeta(int board[7][6], int _depth, bool maximizingPlayer, int maxDepth, int* alpha, int* beta) {
+int alphabeta(int board[7][6], int _depth, bool maximizingPlayer, int maxDepth,
+		int* alpha, int* beta) {
 	char state = checkState(board);
 	if (_depth == maxDepth || state != 'p') {
 		if (state == '2') {
@@ -34,9 +33,13 @@ int alphabeta(int board[7][6], int _depth, bool maximizingPlayer, int maxDepth, 
 				}
 			}
 			_board[i][move] = maximizingPlayer ? 2 : 1;
-			int v = alphabeta(_board, _depth + 1, !maximizingPlayer, maxDepth, alpha, beta);
-			bestValue = maximizingPlayer ? max(v, bestValue) : min(v, bestValue);
-			maximizingPlayer ? *alpha = max(*alpha, -bestValue) : *beta = min(*beta, -bestValue);
+			int v = alphabeta(_board, _depth + 1, !maximizingPlayer, maxDepth,
+					alpha, beta);
+			bestValue =
+					maximizingPlayer ?
+							std::max(v, bestValue) : std::min(v, bestValue);
+			maximizingPlayer ? *alpha = std::max(*alpha, -bestValue) : *beta =
+										std::min(*beta, -bestValue);
 			if (/*(*/(*alpha > *beta) /*&& !maximizingPlayer) || ((*beta > *alpha) && maximizingPlayer)*/) {
 				break;
 			}
