@@ -22,7 +22,7 @@ void evolve() {
 	std::cout << "\n\n\n\n\n\n\n\n\n\n";
 	std::cout << "Generation number: " << generation << std::endl;
 	for (int population = 0; population < pop; ++population) {
-		qsort(fitness[population], gen, sizeof(Fitness), compare);\
+		qsort(fitness[population], gen, sizeof(Fitness), compare);
 		for (int genome = 0; genome < gen; ++genome) {
 			char buff[100];
 			snprintf(buff, 100, "Population %d, Genome %d: %ld", population, genome, fitness[population][genome].fit);
