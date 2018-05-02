@@ -1,3 +1,3 @@
 FourInARow_GIT
 
-see: www.SPOTechnology.com for more info
+see: www.SPOTechnology.com
