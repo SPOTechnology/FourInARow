@@ -3,6 +3,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+extern const int resetPin;
 extern const int sensor[7];
 extern const int horDoor[7];
 extern const int vertDoor[7];
@@ -27,7 +28,7 @@ long power(long base, long exponent);
 void printBoard();
 void drop(int col);
 void AIMove();
-void reset();
+bool reset(bool order);
 String checkCommand();
 void tie();
 void getMove(String server, bool search);

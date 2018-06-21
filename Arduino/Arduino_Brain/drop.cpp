@@ -3,11 +3,11 @@
 
 void vert(String str, int gate) {
   if (str == "open") {
-    digitalWrite(vertDoor[gate], HIGH);
+    digitalWrite(vertDoor[gate], LOW);
     Serial.println("openVert");
     Serial.println(gate);
   } else {
-    digitalWrite(vertDoor[gate], LOW);
+    digitalWrite(vertDoor[gate], HIGH);
     Serial.println("closeVert");
     Serial.println(gate);
   }
@@ -15,11 +15,11 @@ void vert(String str, int gate) {
 
 void hor(String str, int gate) {
   if (str == "open") {
-    digitalWrite(horDoor[gate], HIGH);
+    digitalWrite(horDoor[gate], LOW);
     Serial.println("openHor");
     Serial.println(gate);
   } else {
-    digitalWrite(horDoor[gate], LOW);
+    digitalWrite(horDoor[gate], HIGH);
     Serial.println("closeHor");
     Serial.println(gate);
   }
@@ -36,20 +36,18 @@ void spot (String str, int col) {
 }
 
 void drop(int col) {
-  vert("open", col);
-  spot("off", col);
-  //while (digitalRead(sensor[col]) == LOW);
-  printBoard();
-  //delay(1000);
-  vert("close", col);
-  //delay(500);
-
-  for (int i = col; i < 7; ++i) {
+  for (int i = 6; i > col; --i) {
     hor("open", i);
-    spot("on", i);
-    spot("off", i + 1);
-    //delay(1000);
+    spot("off", i);
+    spot("on", i - 1);
+    delay(1500);
     hor("close", i);
-    //delay(500);
+    delay(750);
   }
+  vert("open", col);
+  while (digitalRead(sensor[col]) == HIGH);
+  printBoard();
+  spot("off", col);
+  delay(750);
+  spot("on", 6);
 }

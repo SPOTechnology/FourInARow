@@ -2,7 +2,9 @@
 #include "globals.h"
 
 void lose() {
-  Serial.println("YouLose");
   printBoard();
-  reset();
+  Serial.println("YouLose");
+  while(!reset(false)){
+    checkCommand();
+  }
 }

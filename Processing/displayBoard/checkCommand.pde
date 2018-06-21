@@ -65,7 +65,7 @@ void checkCommand() {
       lose();
       return;
     }  
-    if (command.equals("Tie")) {
+    if (command.equals("YouTie")) {
       lose();
       return;
     }  

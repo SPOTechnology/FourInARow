@@ -5,7 +5,7 @@ String checkCommand() {
   if (Serial.available()) {
     String input = Serial.readString();
     if (input == "reset" || input == "r" || input == "R") {
-      reset();
+      reset(true);
       return "true";
     } else if (input == "print" || input == "p") {
       printBoard();

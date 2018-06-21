@@ -2,7 +2,9 @@
 #include "globals.h"
 
 void tie() {
-  Serial.println("Tie");
   printBoard();
-  reset();
+  Serial.println("YouTie");
+  while(!reset(false)){
+    checkCommand();
+  }
 }

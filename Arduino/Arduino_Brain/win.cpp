@@ -2,7 +2,9 @@
 #include "globals.h"
 
 void win() {
-  Serial.println("YouWin");
   printBoard();
-  reset();
+  Serial.println("YouWin");
+  while(!reset(false)){
+    checkCommand();
+  }
 }
