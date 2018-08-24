@@ -9,9 +9,9 @@
 byte mac[] = {0x90, 0xA2, 0xDA, 0x0F, 0x98, 0x0F};
 
 IPAddress house(192, 168, 2, 100); // -- Home -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
-IPAddress router(192,168,2,10); // -- Router -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
-IPAddress school(172,16,110,69); // -- School -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
-IPAddress gym(10,1,11,195); // -- Gym -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
+IPAddress router(192, 168, 2, 10); // -- Router -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
+IPAddress school(172, 16, 110, 69); // -- School -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
+IPAddress gym(10, 1, 11, 195); // -- Gym -- numeric IP for www.connect4.spotechnology.com (12/2/2017) (no DNS)
 
 IPAddress ip(192, 168, 2, 11);
 EthernetClient client;
@@ -25,22 +25,25 @@ char makeRequest(bool search) {
     Ethernet.begin(mac, ip);
   }
   delay(500);
-  if (client.connect(house, 80) && (address == "house" || address == "null")) {
-    address = "house";
-    getMove(address, search);
-  } else if (client.connect(school, 80) && (address == "school" || address == "null")) {
-    address = "school";
-    getMove(address, search);
-  } else if (client.connect(gym, 80) && (address == "gym" || address == "null")) {
-    address = "gym";
-    getMove(address, search);
-  } else if (client.connect(router, 80) && (address == "router" || address == "null")) {
-    address = "router";
-    getMove(address, search);
-  } else {
-    Serial.println("connection failed");
-    return 'e';
-  }
+  //  if (client.connect(house, 80) && (address == "house" || address == "null")) {
+  //    address = "house";
+  //    getMove(address, search);
+  //  } else if (client.connect(school, 80) && (address == "school" || address == "null")) {
+  //    address = "school";
+  //    getMove(address, search);
+  //  } else if (client.connect(gym, 80) && (address == "gym" || address == "null")) {
+  //    address = "gym";
+  //    getMove(address, search);
+  //  } else if (client.connect(router, 80) && (address == "router" || address == "null")) {
+  //    address = "router";
+  //    getMove(address, search);
+  //  } else {
+  //    Serial.println("connection failed");
+  //    return 'e';
+  //  }
+  client.connect(router, 80);
+  address = "router";
+  getMove(address, search);
   char input[1000];
   int offset = 0;
   while (!client.connected()) {}

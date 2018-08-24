@@ -29,6 +29,7 @@ void AIMove() {
   }
   Serial.print("AI moves to: ");
   Serial.println(moveChar);
+  while (digitalRead(loadedPin) == HIGH);
   drop(moveChar - 48);
   char checkLose = makeRequest(false);
   while (checkLose == 'e') {

@@ -1,5 +1,32 @@
-#include "Arduino.h"
-#include "globals.h"
+const int sensor[7] = {22, 23, 24, 25, 26, 27, 28};
+const int horDoor[7] = {29, 30, 31, 32, 33, 34, 35};
+const int vertDoor[7] = {36, 37, 38, 39, 40, 41, 42};
+
+void setup() {
+  for (int i = 0; i < 7; ++i) {
+    pinMode(sensor[i], INPUT);
+    pinMode(horDoor[i], OUTPUT);
+    pinMode(vertDoor[i], OUTPUT);
+    digitalWrite(horDoor[i], HIGH);
+    digitalWrite(vertDoor[i], HIGH);
+  }
+  Serial.begin(9600);
+  while (!Serial);
+}
+
+void loop() {
+  if (Serial.available()) {
+    int col = Serial.readString().toInt();
+    Serial.println(col);
+    drop(col);
+  }
+  for(int i = 0; i < 7; ++i){
+    if(digitalRead(sensor[i]) == LOW){
+      Serial.print("Sensor: ");
+      Serial.println(i);
+    }
+  }
+}
 
 void vert(String str, int gate) {
   if (str == "open") {
@@ -53,5 +80,4 @@ void drop(int col) {
   spot("off", col);
   delay(1500);
   spot("on", 6);
-  printBoard();
 }

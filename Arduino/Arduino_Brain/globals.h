@@ -3,6 +3,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+extern const int loadedPin;
 extern const int resetPin;
 extern const int sensor[7];
 extern const int horDoor[7];
