@@ -69,6 +69,8 @@ int main(int argc, char *argv[]) {
 				std::cout << " " << x << ": " << value[x] << std::endl
 						<< "<br/>";
 			}
+			std::cout << std::endl << "<br/>" << "Depth: " << depth << std::endl
+					<< "<br/>" << std::endl;
 			break;
 		case 2:
 			qsort(moves, 7, sizeof(Moves), compareM);
