@@ -40,14 +40,14 @@ void drop(int col) {
     hor("open", i);
     spot("off", i);
     spot("on", i - 1);
-    delay(2000);
+    delay(1300);
     hor("close", i);
   }
   vert("open", col);
   hor("open", col + 1);
   spot("off", col + 1);
   spot("on", col);
-  delay(2000);
+  delay(1300);
   hor("close", col + 1);
   vert("close", col);
   spot("off", col);

@@ -1,6 +1,7 @@
 const int sensor[7] = {22, 23, 24, 25, 26, 27, 28};
 const int horDoor[7] = {29, 30, 31, 32, 33, 34, 35};
 const int vertDoor[7] = {36, 37, 38, 39, 40, 41, 42};
+const int loadedPin = 53;
 
 void setup() {
   for (int i = 0; i < 7; ++i) {
@@ -10,6 +11,7 @@ void setup() {
     digitalWrite(horDoor[i], HIGH);
     digitalWrite(vertDoor[i], HIGH);
   }
+  pinMode(loadedPin, INPUT);
   Serial.begin(9600);
   while (!Serial);
 }
@@ -20,8 +22,8 @@ void loop() {
     Serial.println(col);
     drop(col);
   }
-  for(int i = 0; i < 7; ++i){
-    if(digitalRead(sensor[i]) == LOW){
+  for (int i = 0; i < 7; ++i) {
+    if (digitalRead(sensor[i]) == LOW) {
       Serial.print("Sensor: ");
       Serial.println(i);
     }
@@ -63,18 +65,20 @@ void spot (String str, int col) {
 }
 
 void drop(int col) {
+  while (digitalRead(loadedPin) == HIGH);
+  delay(1000);
   for (int i = 6; i > col + 1; --i) {
     hor("open", i);
     spot("off", i);
     spot("on", i - 1);
-    delay(2000);
+    delay(1300);
     hor("close", i);
   }
   vert("open", col);
   hor("open", col + 1);
   spot("off", col + 1);
   spot("on", col);
-  delay(2000);
+  delay(1300);
   hor("close", col + 1);
   vert("close", col);
   spot("off", col);
