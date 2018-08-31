@@ -33,5 +33,6 @@ bool reset(bool order);
 String checkCommand();
 void tie();
 void getMove(String server, bool search);
+void spot (String str, int col);
 
 #endif

@@ -1,4 +1,5 @@
 void tie() {  
+  over = true;
   background(0, 0, 255);
   drawGrid();
   showDisks();
@@ -6,4 +7,9 @@ void tie() {
     horDoor[i].show();
     vertDoor[i].show();
   }
+  pushMatrix();
+  fill(0);
+  textSize(350);
+  text("TIE", width/2, height/2-50);
+  popMatrix();
 }

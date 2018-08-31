@@ -25,10 +25,12 @@ void showDisks() {
       noStroke();
       fill(255, 225, 0);
       ellipse(map(x, 0, 6, 555, 1335), map(x, 0, 6, 122, 62), 120, 120);
-      fill(0);
-      textSize(55);
-      textAlign(CENTER, CENTER);
-      text(x, map(x, 0, 6, 554, 1334), map(x, 0, 6, 118, 58));
     }
+  }
+  for (int x = 0; x < 7; ++x) {
+    fill(0);
+    textSize(55);
+    textAlign(CENTER, CENTER);
+    text(x, map(x, 0, 6, 554, 1334), map(x, 0, 6, 118, 58));
   }
 }

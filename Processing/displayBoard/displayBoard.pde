@@ -7,7 +7,10 @@ HorDoor[] horDoor = new HorDoor[7];
 int[][] brd = new int[7][6];
 boolean[] spot = new boolean[8];
 
-String program = "neural\nnetwork";
+boolean thinking = false;
+boolean over = false;
+
+String program = "Minimax";
 
 void setup() {
   size(1920, 1080);
@@ -35,13 +38,20 @@ void setup() {
 }
 
 void draw() {
-  background(200);
-  drawGrid();
-  checkCommand();
-  showDisks();
-  for (int i = 0; i < 7; ++i) {
-    horDoor[i].show();
-    vertDoor[i].show();
+  if (!over) {
+    background(200);
+    drawGrid();
   }
-  displayProgram();
+  checkCommand();
+  if (!over) {
+    showDisks();
+    for (int i = 0; i < 7; ++i) {
+      horDoor[i].show();
+      vertDoor[i].show();
+    }
+    displayProgram();
+    if (thinking) {
+      displayThinking();
+    }
+  }
 }

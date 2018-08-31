@@ -20,14 +20,14 @@ void checkCommand() {
       while (command.equals("empty") || command.equals("openHor")) {
         command = read();
       }
-      horDoor[Integer.parseInt(command)].dOpen();
+      horDoor[Integer.parseInt(command) - 1].dOpen();
       return;
     }  
     if (command.equals("closeHor")) {
       while (command.equals("empty") || command.equals("closeHor")) {
         command = read();
       }
-      horDoor[Integer.parseInt(command)].dClose();
+      horDoor[Integer.parseInt(command) - 1].dClose();
       return;
     }  
     if (command.equals("onSpot")) {
@@ -93,5 +93,13 @@ void checkCommand() {
       displayProgram();
       return;
     }  
+    if (command.equals("T")) {
+      thinking = true;
+      return;
+    }    
+    if (command.equals("P")) {
+      thinking = false;
+      return;
+    }
   }
 }

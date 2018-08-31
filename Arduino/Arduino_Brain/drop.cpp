@@ -40,18 +40,17 @@ void drop(int col) {
     hor("open", i);
     spot("off", i);
     spot("on", i - 1);
-    delay(1300);
+    delay(1600);
     hor("close", i);
   }
   vert("open", col);
   hor("open", col + 1);
   spot("off", col + 1);
   spot("on", col);
-  delay(1300);
+  delay(1600);
   hor("close", col + 1);
   vert("close", col);
   spot("off", col);
   delay(1500);
-  spot("on", 6);
   printBoard();
 }

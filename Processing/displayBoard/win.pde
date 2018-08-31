@@ -1,4 +1,5 @@
 void win() {
+  over = true;
   background(0, 255, 0);
   drawGrid();
   showDisks();
@@ -6,4 +7,9 @@ void win() {
     horDoor[i].show();
     vertDoor[i].show();
   }  
+  pushMatrix();
+  fill(0);
+  textSize(350);
+  text("YOU WIN", width/2, height/2-50);
+  popMatrix();
 }

@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
 			std::cout << std::endl << "<br/>";
 			std::cout << "Minimax" << std::endl << "<br/>";
 			for (int x = 0; x < 7; ++x) {
-				std::cout << " " << x << ": " << value[x] << std::endl
+				std::cout << " " << x << ": " << moves[x].val << std::endl
 						<< "<br/>";
 			}
 			std::cout << std::endl << "<br/>" << "Depth: " << depth << std::endl
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 			std::cout << std::endl << "<br/>";
 			std::cout << "Benimax" << std::endl << "<br/>";
 			for (int x = 0; x < 7; ++x) {
-				std::cout << " " << moves[x].move << ": " << moves[x].val
+				std::cout << " " << moves[x].move << ": " << value[x]
 						<< std::endl << "<br/>";
 			}
 			std::cout << std::endl << "<br/>" << "Depth: " << depth << std::endl
