@@ -29,6 +29,6 @@ String checkCommand() {
       return input;
     }
   }
-  return "false";
+  return (reset(false) ? "true" : "false");
 }
 

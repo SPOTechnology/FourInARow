@@ -8,6 +8,7 @@ int[][] brd = new int[7][6];
 boolean[] spot = new boolean[8];
 
 boolean thinking = false;
+boolean override = false;
 boolean over = false;
 
 String program = "Minimax";
@@ -52,6 +53,9 @@ void draw() {
     displayProgram();
     if (thinking) {
       displayThinking();
+    }    
+    if (override) {
+      displayOverride();
     }
   }
 }

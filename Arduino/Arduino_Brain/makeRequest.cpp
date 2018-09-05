@@ -46,7 +46,23 @@ char makeRequest(bool search) {
   getMove(address, search);
   char input[1000];
   int offset = 0;
-  while (!client.connected()) {}
+  while (!client.connected()) {
+    if (millis() - prevTime > 200) {
+      prevTime = millis();
+      if (digitalRead(overridePin) == HIGH) {
+        Serial.println("O");
+        while (digitalRead(overridePin) == HIGH);
+      } else {
+        Serial.println("U");
+      }
+    }
+  }
+  if (digitalRead(overridePin) == HIGH) {
+    Serial.println("O");
+    while (digitalRead(overridePin) == HIGH);
+  } else {
+    Serial.println("U");
+  }
   while (client.connected()) {
     if (client.available()) {
       input[offset] = client.read();
@@ -54,6 +70,15 @@ char makeRequest(bool search) {
     }
   }
   if (!client.connected()) {
+    if (millis() - prevTime > 200) {
+      prevTime = millis();
+      if (digitalRead(overridePin) == HIGH) {
+        Serial.println("O");
+        while (digitalRead(overridePin) == HIGH);
+      } else {
+        Serial.println("U");
+      }
+    }
     client.stop();
     for (int i = 0; i < 993; ++i) {
       if ((input[i] == 's') && (input[i + 1] == ' ') && (input[i + 2] == 't') && (input[i + 3] == 'o') && (input[i + 4] == ':') && (input[i + 5] == ' ')) {

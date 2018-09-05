@@ -101,5 +101,13 @@ void checkCommand() {
       thinking = false;
       return;
     }
+    if (command.equals("O")) {
+      override = true;
+      return;
+    }
+    if (command.equals("U")) {
+      override = false;
+      return;
+    }
   }
 }

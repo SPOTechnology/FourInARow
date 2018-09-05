@@ -10,6 +10,12 @@ void humanMove() {
       if (digitalRead(loadedPin) == LOW) {
         spot("on", 6);
       }
+      if (digitalRead(overridePin) == HIGH) {
+        Serial.println("O");
+        while (digitalRead(overridePin) == HIGH);
+      } else {
+        Serial.println("U");
+      }
     }
     String input = checkCommand();
     if ((digitalRead(sensor[0]) == LOW || input == "0") && _0 < 100000) {

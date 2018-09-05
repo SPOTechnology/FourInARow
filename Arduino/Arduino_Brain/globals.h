@@ -5,11 +5,14 @@
 
 extern const int loadedPin;
 extern const int resetPin;
+extern const int overridePin;
 extern const int sensor[7];
 extern const int horDoor[7];
 extern const int vertDoor[7];
 extern int program;
 extern String address;
+
+extern long prevTime;
 
 extern long _0;
 extern long _1;
