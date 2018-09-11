@@ -46,6 +46,6 @@ void AIMove() {
   } else {
     printBoard();
   }
-  delay(3000);
+  delay(500);
 }
 

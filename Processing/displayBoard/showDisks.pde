@@ -31,6 +31,6 @@ void showDisks() {
     fill(0);
     textSize(55);
     textAlign(CENTER, CENTER);
-    text(x, map(x, 0, 6, 554, 1334), map(x, 0, 6, 118, 58));
+    text(x+1, map(x, 0, 6, 554, 1334), map(x, 0, 6, 118, 58));
   }
 }
