@@ -15,7 +15,7 @@ String program = "Minimax";
 
 void setup() {
   size(1920, 1080);
-  port = new Serial(this, "/dev/ttyACM1", 9600);
+  port = new Serial(this, "/dev/ttyACM0", 9600);
   port.bufferUntil('\n');
 
   vertDoor[0] = new VertDoor(490, 200);

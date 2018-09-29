@@ -1,6 +1,7 @@
+
+const int sensor[7] = {22, 23, 24, 25, 26, 27, 28};
 void setup() {
   // put your setup code here, to run once:
-  const int sensor[7] = {22, 23, 24, 25, 26, 27, 28};
   for (int i = 0; i < 7; ++i) {
     pinMode(sensor[i], INPUT);
   }
@@ -11,7 +12,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 7; ++i) {
-    if(digitalRead(sensor[i] == LOW){
+    if (digitalRead(sensor[i] == HIGH)) {
       Serial.println(i);
     }
   }
